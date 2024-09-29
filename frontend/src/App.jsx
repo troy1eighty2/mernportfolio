@@ -3,18 +3,24 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Exposition from "./pages/Exposition.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import styles from "./App.module.css";
 
 function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/projects" element={<Projects></Projects>}></Route>
-        <Route path="/exposition" element={<Exposition></Exposition>}></Route>
-
-      </Routes>
+      <div className={styles.container}>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/about" element={<About></About>}></Route>
+          <Route path="/projects" element={<Projects></Projects>}></Route>
+          <Route path="/exposition" element={<Exposition></Exposition>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
