@@ -5,19 +5,19 @@ function Navbar() {
   return <>
     <nav className={styles.navbar}>
       <div>
-        <Link to="/">troy tran</Link>
+        <Link to="/"><h2>troy tran</h2></Link>
       </div>
       <ul className={styles.links}>
         <li>
-          <Link to="/about">about</Link>
+          <Link to="/about"><h2>about</h2></Link>
         </li>
         <li>-</li>
         <li>
-          <Link to="/projects">projects</Link>
+          <Link to="/projects"><h2>projects</h2></Link>
         </li>
         <li>-</li>
         <li>
-          <Link to="/exposition">exposition</Link>
+          <Link to="/exposition"><h2>exposition</h2></Link>
         </li>
       </ul>
     </nav>

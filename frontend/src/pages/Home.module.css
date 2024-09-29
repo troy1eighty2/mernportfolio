@@ -1,4 +1,4 @@
-.homecontent p {
+.homecontent>* {
   margin-bottom: 3%;
   text-align: center;
 }
