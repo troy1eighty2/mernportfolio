@@ -6,7 +6,18 @@ const router = express.Router();
 router.get("/", async (request, response) => {
   try {
     const blog = await BlogEntry.find({});
-    console.log("yes")
+    return response.status(200).json(blog)
+  }
+  catch (error) {
+    console.log(error)
+  }
+})
+
+router.get("/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
+    console.log(request.params);
+    const blog = await BlogEntry.findById(id)
     return response.status(200).json(blog)
   }
   catch (error) {

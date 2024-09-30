@@ -5,6 +5,7 @@ import Projects from "./pages/Projects.jsx";
 import Exposition from "./pages/Exposition.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Content from "./pages/Content.jsx";
 import styles from "./App.module.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/projects" element={<Projects></Projects>}></Route>
           <Route path="/exposition" element={<Exposition></Exposition>}></Route>
+          <Route path="/exposition/:id" element={<Content></Content>}></Route>
         </Routes>
         <Footer></Footer>
       </div>

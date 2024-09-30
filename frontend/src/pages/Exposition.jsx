@@ -2,6 +2,7 @@ import styles from "./Exposition.module.css";
 import { useState, useEffect } from "react";
 import boilerplate from "./Boilerplate.module.css";
 import axios from "axios";
+import BlogItem from "../components/BlogItem/BlogItem.jsx";
 
 function Exposition() {
   const [blog, setBlog] = useState([]);
@@ -27,9 +28,7 @@ function Exposition() {
       </p>
       <div>
         {blog.map((blog) =>
-          <div key={blog._id}>
-            placeholder for blog entry
-          </div>
+          <BlogItem key={blog._id} id={blog._id} title={blog.title} blurb={blog.blurb} date={blog.date}></BlogItem>
         )}
       </div>
     </div>
