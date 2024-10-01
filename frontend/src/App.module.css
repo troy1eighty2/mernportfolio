@@ -19,3 +19,27 @@
   width: 800px;
   margin: 0 auto;
 }
+
+a:link,
+a:visited {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:link:active,
+a:visited:active {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -2,9 +2,9 @@ import styles from "./Home.module.css";
 function Home() {
   return <>
     <div className={styles.homecontent}>
-      <h1>Hello.</h1>
-      <h2>I am a full-time student and a hobby programmer from Texas.</h2>
-      <h2>Reach me at <a href="mailto:troytran000@gmail.com">troytran000@gmail.com</a> and lets make something cool together!</h2>
+      <p>Hello.</p>
+      <p>I am a full-time student and a hobby programmer from Texas.</p>
+      <p>Reach me at <a href="mailto:troytran000@gmail.com">troytran000@gmail.com</a> and lets make something cool together!</p>
     </div>
   </>
 }

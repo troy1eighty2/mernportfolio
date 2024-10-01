@@ -6,12 +6,16 @@ import BlogItem from "../components/BlogItem/BlogItem.jsx";
 
 function Exposition() {
   const [blog, setBlog] = useState([]);
+  const [recent, setRecent] = useState(null);
 
   useEffect(() => {
     axios
       .get("http://localhost:5000/exposition")
       .then((response) => {
         setBlog(response.data);
+        if (response.data.length > 0) {
+          setRecent(response.data[0].date);
+        }
       })
       .catch((error) => {
         console.log(error)
@@ -21,7 +25,7 @@ function Exposition() {
     <div className={boilerplate.page}>
       <div>
         <h1>Exposition</h1>
-        <p className={boilerplate.info}>last updated placehoder</p>
+        <p className={boilerplate.info}>Last Updated {new Date(recent).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p>
       </div>
       <p>
         Silly little thoughts from my silly little smooth brain

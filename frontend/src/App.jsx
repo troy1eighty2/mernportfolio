@@ -10,6 +10,7 @@ import styles from "./App.module.css";
 
 function App() {
 
+
   return (
     <>
       <div className={styles.container}>
@@ -22,7 +23,7 @@ function App() {
           <Route path="/exposition/:id" element={<Content></Content>}></Route>
         </Routes>
         <Footer></Footer>
-      </div>
+      </div >
     </>
   )
 }

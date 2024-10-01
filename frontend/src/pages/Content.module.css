@@ -1,0 +1,11 @@
+.content>* {
+  margin-bottom: 3%;
+}
+
+.date {
+  color: gray;
+}
+
+.img {
+  max-width: 300px;
+}

@@ -3,7 +3,8 @@ function ProjectItem({ name, blurb, url, date }) {
   const reDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
+    timeZone: "UTC"
   });
   return <li className={styles.item}>
     <div>
