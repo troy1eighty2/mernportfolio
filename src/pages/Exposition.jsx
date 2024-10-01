@@ -10,7 +10,7 @@ function Exposition() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/exposition")
+      .get(`${process.env.REACT_APP_API_URL}/exposition`)
       .then((response) => {
         setBlog(response.data);
         if (response.data.length > 0) {

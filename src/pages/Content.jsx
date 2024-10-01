@@ -10,7 +10,7 @@ function Content() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/exposition/${id}`)
+      .get(`${process.env.REACT_APP_API_URL}/exposition/${id}`)
       .then((response) => {
         setBlog(response.data)
       })
