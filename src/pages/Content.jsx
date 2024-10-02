@@ -10,7 +10,7 @@ function Content() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/exposition/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/exposition/${id}`)
       .then((response) => {
         setBlog(response.data)
       })
