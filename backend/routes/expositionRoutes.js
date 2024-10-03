@@ -1,7 +1,15 @@
 import express from "express";
 import BlogEntry from "../models/BlogEntry.js";
+import cors from "cors";
 
 const router = express.Router();
+
+router.use(cors({
+  origin: "https://troytran.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // Include credentials if using cookies or authentication
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 router.get("/", async (request, response) => {
   try {
