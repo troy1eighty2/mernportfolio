@@ -14,6 +14,12 @@ app.use(cors({
   credentials: true, // Include credentials if using cookies or authentication
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+app.options('*', cors({
+  origin: "https://troytran.com",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+}));
 
 app.use(express.json());
 
