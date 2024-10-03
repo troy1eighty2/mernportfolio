@@ -7,6 +7,7 @@ import BlogItem from "../components/BlogItem/BlogItem.jsx";
 function Exposition() {
   const [blog, setBlog] = useState([]);
   const [recent, setRecent] = useState(null);
+  const blog_sorted = blog.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   useEffect(() => {
     axios
@@ -25,13 +26,13 @@ function Exposition() {
     <div className={boilerplate.page}>
       <div>
         <h1>Exposition</h1>
-        <p className={boilerplate.info}>Last Updated {new Date(recent).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p>
+        <p className={boilerplate.info}>{recent ? `Last Updated {new Date(recent).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}` : ""}</p>
       </div>
       <p>
         Silly little thoughts from my silly little smooth brain
       </p>
       <div>
-        {blog.map((blog) =>
+        {blog_sorted.map((blog) =>
           <BlogItem key={blog._id} id={blog._id} title={blog.title} blurb={blog.blurb} date={blog.date}></BlogItem>
         )}
       </div>

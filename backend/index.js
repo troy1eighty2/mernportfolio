@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import expositionRoutes from "./routes/expositionRoutes.js";
+import path from "path";
 
 dotenv.config();
 
@@ -24,6 +25,13 @@ app.options('*', cors(corsOptions));
 app.use(express.json());
 
 app.use('/exposition', expositionRoutes);
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
+});
 
 mongoose
   .connect(process.env.MONGO_URI)
