@@ -7,9 +7,14 @@ import expositionRoutes from "./routes/expositionRoutes.js";
 dotenv.config();
 
 const app = express();
+
 app.use(cors({
-  origin: ["https://troytran.com", "https://api.troytran.com/exposition"],
+  origin: "https://troytran.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // Include credentials if using cookies or authentication
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(express.json());
 
 app.use('/exposition', expositionRoutes);
