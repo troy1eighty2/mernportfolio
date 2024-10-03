@@ -24,10 +24,11 @@ app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
-app.use('/exposition', expositionRoutes);
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '/dist')));
+
+app.use('/exposition', expositionRoutes);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
