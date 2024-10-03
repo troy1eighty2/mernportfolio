@@ -8,18 +8,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://troytran.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true, // Include credentials if using cookies or authentication
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
-app.options('*', cors({
-  origin: "https://troytran.com",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-}));
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://troytran.com");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200); // Respond OK to preflight requests
+  }
+
+  next();
+});
 
 app.use(express.json());
 
