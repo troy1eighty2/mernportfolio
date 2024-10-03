@@ -28,7 +28,7 @@ app.use('/exposition', expositionRoutes);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(process.env.PORT, "0.0.0.0", () => {
+    app.listen(process.env.PORT, () => {
       console.log(`Connected to database and listening on port ${process.env.PORT}`)
     })
 
