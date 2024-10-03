@@ -30,7 +30,7 @@ function Content() {
           const Tag = item.type;
           switch (Tag) {
             case "img":
-              return <img src={`../blogmedia/${item.tag}`} className={styles.img} />;
+              return <img src={`/blogmedia/${item.tag}`} className={styles.img} />;
             default:
               return <Tag key={index}>{item.title}</Tag>
           };
