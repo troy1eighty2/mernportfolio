@@ -10,6 +10,7 @@ router.get("/", async (request, response) => {
   }
   catch (error) {
     console.log(error)
+    return response.status(500).json({ error: "server error" });
   }
 })
 
@@ -21,6 +22,7 @@ router.get("/:id", async (request, response) => {
   }
   catch (error) {
     console.log(error)
+    return response.status(500).json({ error: "server error" });
   }
 })
 
