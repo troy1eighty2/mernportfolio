@@ -12,11 +12,11 @@ function Exposition() {
     axios
       .get(`${import.meta.env.VITE_API_URL}/exposition`)
       .then((response) => {
-        const blog_sorted = blog.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const blog_sorted = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
         setBlog(blog_sorted);
 
-        if (blog.length > 0) {
-          setRecent(blog[0].date);
+        if (blog_sorted.length > 0) {
+          setRecent(blog_sorted[0].date);
         }
       })
       .catch((error) => {
