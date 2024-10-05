@@ -12,7 +12,9 @@ function Exposition() {
     axios
       .get(`${import.meta.env.VITE_API_URL}/exposition`)
       .then((response) => {
-        const blog_sorted = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const blog_sorted = response.data
+          .map((item) => ({ ...item, date: new Date(item.date) }))
+          .sort((a, b) => b.date - a.date);
         setBlog(blog_sorted);
 
         if (blog_sorted.length > 0) {
