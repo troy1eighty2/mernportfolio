@@ -26,15 +26,7 @@ app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
-
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'dist')));
-
 app.use('/exposition', expositionRoutes);
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
 
 const httpsOptions = {
   key: fs.readFileSync("/etc/letsencrypt/live/api.troytran.com/privkey.pem"),
