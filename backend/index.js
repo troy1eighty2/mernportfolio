@@ -37,8 +37,8 @@ app.get('*', (req, res) => {
 });
 
 const httpsOptions = {
-  key: fs.readFileSync(path.resolve(__dirname, 'certificates/key.pem')),
-  cert: fs.readFileSync(path.resolve(__dirname, 'certificates/cert.pem')),
+  key: fs.readFileSync("/etc/letsencrypt/live/api.troytran.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/api.troytran.com/fullchain.pem"),
 };
 
 mongoose
