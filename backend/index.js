@@ -4,6 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import expositionRoutes from "./routes/expositionRoutes.js";
 import path from "path";
+import https from "https";
+import fs from "fs";
 
 dotenv.config();
 
@@ -34,11 +36,16 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+const httpsOptions = {
+  key: fs.readFileSync(path.resolve(__dirname, 'certificates/key.pem')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'certificates/cert.pem')),
+};
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
-      console.log(`Connected to database and listening on port ${process.env.PORT}`)
+    https.createServer(httpsOptions, app).listen(443, () => {
+      console.log(`Connected to database and listening on port 443`)
     })
 
   })
