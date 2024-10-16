@@ -13,17 +13,19 @@ function App() {
 
   return (
     <>
-      <div className={styles.container}>
-        <Navbar></Navbar>
-        <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/about" element={<About></About>}></Route>
-          <Route path="/projects" element={<Projects></Projects>}></Route>
-          <Route path="/exposition" element={<Exposition></Exposition>}></Route>
-          <Route path="/exposition/:id" element={<Content></Content>}></Route>
-        </Routes>
-        <Footer></Footer>
-      </div >
+      <Router>
+        <div className={styles.container}>
+          <Navbar></Navbar>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+            <Route path="/projects" element={<Projects></Projects>}></Route>
+            <Route path="/exposition" element={<Exposition></Exposition>}></Route>
+            <Route path="/exposition/:id" element={<Content></Content>}></Route>
+          </Routes>
+          <Footer></Footer>
+        </div >
+      </Router>
     </>
   )
 }
