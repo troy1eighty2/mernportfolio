@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import expositionRoutes from "./routes/expositionRoutes.js";
 import path from "path";
 import https from "https";
+import http from "http";
 import fs from "fs";
 
 dotenv.config();
@@ -32,6 +33,11 @@ const httpsOptions = {
   key: fs.readFileSync("/etc/letsencrypt/live/api.troytran.com/privkey.pem"),
   cert: fs.readFileSync("/etc/letsencrypt/live/api.troytran.com/fullchain.pem"),
 };
+
+http.createServer((req, res) => {
+  res.writeHead(301, { "Location": `https://${req.headers.host}${req.url}` });
+  res.end();
+}).listen(80);
 
 mongoose
   .connect(process.env.MONGO_URI)
