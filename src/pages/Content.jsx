@@ -34,7 +34,7 @@ function Content() {
             case "a":
               return <a href={item.title} target="_blank">{item.link}</a>;
             case "iframe":
-              return <iframe width="100%" height="100%" src={item.title} allowfullscreen></iframe>
+              return <iframe width="300px" height="169px" src={item.title} allowfullscreen></iframe>
             default:
               return <Tag key={index}>{item.title}</Tag>
           };
