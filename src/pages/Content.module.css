@@ -1,4 +1,4 @@
-.content>* {
+.content>*:not(a) {
   margin-bottom: 5%;
 }
 

@@ -31,6 +31,10 @@ function Content() {
           switch (Tag) {
             case "img":
               return <img src={item.title} className={styles.img} />;
+            case "a":
+              return <a href={item.title} target="_blank">{item.link}</a>;
+            case "iframe":
+              return <iframe width="100%" height="auto" src={item.title} allowfullscreen></iframe>
             default:
               return <Tag key={index}>{item.title}</Tag>
           };
