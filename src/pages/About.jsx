@@ -9,7 +9,7 @@ function About() {
       </div>
       <p>
         I was born and raised in Texas. I go to school here too, where I picked up programming for fun.
-        I am obessed with workflow configuration and VIM. I play guitar and I like boydbuilding.
+        I am obessed with workflow configuration and VIM. I play guitar and I like bodybuilding.
       </p>
       <div>
         <h2>Hardware I'm Rocking:</h2>
@@ -32,6 +32,15 @@ function About() {
           <li>Favorite Nvim Plugins: flash, harpoon, surround</li>
           <li>Windows Manager: i3</li>
           <li>Theme: gruvbox</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Guitar Rig:</h2>
+        <ul>
+          <li>Ibanez GRGR131EX</li>
+          <li>EMG Pickups</li>
+          <li>Mini Boss Katana</li>
+          <li>Self-proclaimed numba one my bloody valentine fan</li>
         </ul>
       </div>
       <p>My <a href="https://github.com/troy1eighty2/config" target="_blank">config files</a> are on my GitHub</p>
