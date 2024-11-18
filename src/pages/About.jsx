@@ -9,7 +9,7 @@ function About() {
       </div>
       <p>
         I was born and raised in Texas. I go to school here too, where I picked up programming for fun.
-        I am obessed with workflow configuration and VIM. I play guitar and I like bodybuilding.
+        I am obsessed with workflow configuration and VIM. I like guitar and pro bodybuilding.
       </p>
       <div>
         <h2>Hardware I'm Rocking:</h2>
