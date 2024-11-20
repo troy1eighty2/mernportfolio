@@ -34,7 +34,7 @@ function Content() {
             case "a":
               return <a href={item.title} target="_blank">{item.link}</a>;
             case "iframe":
-              return <iframe width="400" height="300" src="https://www.youtube.com/embed/X6AR2RMB5tE?si=RLJECLD9MX8zlAfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             default:
               return <Tag key={index}>{item.title}</Tag>
           };
