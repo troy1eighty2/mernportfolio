@@ -42,6 +42,7 @@ function About() {
           <li>Mini Boss Katana</li>
           <li>Self-proclaimed numba one my bloody valentine fan</li>
         </ul>
+        {/* hi */}
       </div>
       <p>My <a href="https://github.com/troy1eighty2/config" target="_blank">config files</a> are on my GitHub</p>
     </div>
