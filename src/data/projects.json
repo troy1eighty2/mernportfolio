@@ -40,5 +40,12 @@
     "date": "2024-10-27",
     "url": "https://github.com/troy1eighty2/fatima_website",
     "blurb": "is a website for a printing service."
+  },
+  {
+    "id": 7,
+    "name": "today",
+    "date": "2024-12-23",
+    "url": "https://github.com/troy1eighty2/today",
+    "blurb": "is a cli productivity tool for creating heatmaps."
   }
 ]
