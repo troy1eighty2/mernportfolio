@@ -43,9 +43,16 @@
   },
   {
     "id": 7,
-    "name": "today",
+    "name": "Today",
     "date": "2024-12-23",
     "url": "https://github.com/troy1eighty2/today",
     "blurb": "is a cli productivity tool for creating heatmaps."
+  },
+  {
+    "id": 8,
+    "name": "Guardian Eyes",
+    "date": "2025-05-12",
+    "url": "https://github.com/troy1eighty2/unattended-car-alarm-system",
+    "blurb": "is an infrared camera system to protect children and pets in bad weather."
   }
 ]
