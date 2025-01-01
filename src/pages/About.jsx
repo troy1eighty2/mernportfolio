@@ -9,7 +9,7 @@ function About() {
       </div>
       <p>
         I was born and raised in Texas. I go to school here too, where I picked up programming for fun.
-        I am obsessed with workflow configuration and VIM. I like guitar and pro bodybuilding.
+        I am obsessed with workflow configuration and VIM. I love collecting laptops to refurbish with new parts and software to be brandished as daily drivers. I like guitar and bodybuilding with my role models being Mario Camarena and Mike Mentzer.
       </p>
       <div>
         <h2>Hardware I'm Rocking:</h2>
@@ -35,16 +35,16 @@ function About() {
         </ul>
       </div>
       <div>
-        <h2>Guitar Rig:</h2>
+        <h2>Guitar:</h2>
         <ul>
-          <li>Ibanez GRGR131EX</li>
-          <li>EMG Pickups</li>
+          <li>Ibanez Gio</li>
           <li>Mini Boss Katana</li>
-          <li>Self-proclaimed numba one my bloody valentine fan</li>
+          <li>Jazz 3 Picks</li>
+          <li>Rhythm and Hybrid Picking</li>
         </ul>
         {/* hi */}
       </div>
-      <p>My <a href="https://github.com/troy1eighty2/config" target="_blank">config files</a> are on my GitHub</p>
+      <p>My <a href="https://github.com/troy1eighty2/config" target="_blank"> nvim config files</a> and <a href="https://github.com/troy1eighty2/vimconfig" target="_blank"> vim config files</a> are on my GitHub</p>
     </div>
   </>
 }

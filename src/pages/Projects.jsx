@@ -11,7 +11,7 @@ function Projects() {
       <div >
         <div>
           <h1>Projects</h1>
-          <p className={boilerplate.info}>Things that I've worked on sorted by date</p>
+          <p className={boilerplate.info}>Things that I am or have worked on. </p>
         </div>
       </div>
       <div>
