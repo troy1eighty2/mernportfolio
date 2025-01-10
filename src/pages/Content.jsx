@@ -2,7 +2,8 @@ import styles from "./Content.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import boilerplate from "./Boilerplate.module.css"
+import boilerplate from "./Boilerplate.module.css";
+import { Helmet } from "react-helmet";
 
 function Content() {
   const [blog, setBlog] = useState({ title: "", blurb: "", content: [], date: "" });
@@ -20,7 +21,11 @@ function Content() {
   }, [])
   return <>
     <div className={boilerplate.page}>
-      <div >
+      <Helmet>
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.blurb} />
+      </Helmet>
+      <div>
         <h1>{blog.title}</h1>
         <p>{blog.blurb}</p>
         <p className={styles.date}>{new Date(blog.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p>
