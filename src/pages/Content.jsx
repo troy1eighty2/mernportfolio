@@ -18,12 +18,13 @@ function Content() {
       .catch((error) => {
         console.log(error)
       })
-  }, [])
+  }, [id])
   return <>
     <div className={boilerplate.page}>
       <Helmet>
         <meta property="og:title" content={blog.title} />
         <meta property="og:description" content={blog.blurb} />
+        <meta property="og:type" content="article" />
       </Helmet>
       <div>
         <h1>{blog.title}</h1>
