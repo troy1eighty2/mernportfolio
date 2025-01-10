@@ -10,7 +10,7 @@ function BlogItem({ id, title, blurb, date }) {
   });
   return <li className={styles.item}>
     <div>
-      <Link to={`/exposition/${id}`}>{title}</Link>
+      <Link to={`/exposition/${id}/${title}`}>{title}</Link>
       <p>{blurb}</p>
     </div>
     <div >
