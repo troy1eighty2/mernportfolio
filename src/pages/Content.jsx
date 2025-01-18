@@ -40,7 +40,10 @@ function Content() {
             case "a":
               return <a href={item.title} target="_blank">{item.link}</a>;
             case "iframe":
-              return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            case "short":
+              return <iframe width="300" height="500" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
             default:
               return <Tag key={index}>{item.title}</Tag>
           };
