@@ -9,7 +9,7 @@ function About() {
       </div>
       <p>
         I was born and raised in Texas. I go to school here too, where I picked up programming for fun.
-        I am obsessed with workflow configuration and VIM. I love collecting laptops to refurbish with new parts and software to be brandished as daily drivers. I like guitar and bodybuilding with my role models being Mario Camarena and Mike Mentzer.
+        I am obsessed with workflow configuration and VIM. I love collecting laptops to refurbish with new parts and software to be brandished as daily drivers. I like guitar and bodybuilding with my role models being Yvette Young and Wesley Vissers.
       </p>
       <div>
         <h2>Hardware I'm Rocking:</h2>

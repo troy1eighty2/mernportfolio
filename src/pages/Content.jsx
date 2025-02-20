@@ -22,9 +22,10 @@ function Content() {
   return <>
     <div className={boilerplate.page}>
       <Helmet>
-        <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.blurb} />
-        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:title" content="title" />
+        <meta name="twitter:description" content="description" />
+        <meta name="twitter:image" content="https://i.pinimg.com/736x/4d/ac/b3/4dacb3d8813362382b435d022f5a0070.jpg" />
       </Helmet>
       <div>
         <h1>{blog.title}</h1>

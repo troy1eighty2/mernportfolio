@@ -7,8 +7,10 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Content from "./pages/Content.jsx";
 import styles from "./App.module.css";
+import { useState } from "react";
 
 function App() {
+  const [blogID, setBlogID] = useState(null)
 
 
   return (
@@ -19,7 +21,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/projects" element={<Projects></Projects>}></Route>
-          <Route path="/exposition" element={<Exposition></Exposition>}></Route>
+          <Route path="/exposition" element={<Exposition blogID={blogID} setBlogID={setBlogID}></Exposition>}></Route>
           <Route path="/exposition/:id/:title" element={<Content></Content>}></Route>
         </Routes>
         <Footer></Footer>

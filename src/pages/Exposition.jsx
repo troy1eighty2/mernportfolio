@@ -4,7 +4,7 @@ import boilerplate from "./Boilerplate.module.css";
 import axios from "axios";
 import BlogItem from "../components/BlogItem/BlogItem.jsx";
 
-function Exposition() {
+function Exposition({ blogID, setBlogID }) {
   const [blog, setBlog] = useState([]);
   const [recent, setRecent] = useState(null);
 
