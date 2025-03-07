@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import { CopyBlock, monokai } from "react-code-blocks";
 function Home() {
   return <>
     <div className={styles.homecontent}>

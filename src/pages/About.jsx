@@ -1,4 +1,5 @@
 import styles from "./About.module.css";
+import { CopyBlock, monokai } from "react-code-blocks";
 import boilerplate from "./Boilerplate.module.css";
 function About() {
   return <>

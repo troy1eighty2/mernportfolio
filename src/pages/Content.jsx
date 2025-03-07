@@ -42,13 +42,13 @@ function Content() {
             case "img":
               return <img src={item.title} className={styles.img} />;
             case "a":
-              return <a href={item.title} target="_blank">{item.link}</a>;
+              return <a href={item.link} target="_blank">{item.title}</a>;
             case "iframe":
               return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             case "short":
               return <iframe width="300" height="500" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             case "codeblock":
-              return <CopyBlock text={`${item.title}`} language={`${item.language}`} showLineNumbers={true} startingLineNumber={0} theme={monokai}></CopyBlock>
+              return <CopyBlock text={`${item.title}`} language={`${item.language}`} showLineNumbers={true} startingLineNumber={1} theme={monokai}></CopyBlock>
             case "SSOI":
               {
                 const data = {
