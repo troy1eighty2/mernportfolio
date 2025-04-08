@@ -49,7 +49,7 @@ function Content() {
               return <iframe width="300" height="500" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             case "codeblock":
               return <div className={styles.codeblock}><CopyBlock text={`${item.title}`} language={`${item.language}`} showLineNumbers={true} startingLineNumber={1} theme={monokai}></CopyBlock></div>
-            case "SSOI":
+            case "OIRSS":
               {
                 const data = {
                   labels: ['overload', 'isolation', 'resistanceProfile', 'stability', 'sustainability'],
