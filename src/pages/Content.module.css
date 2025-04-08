@@ -18,3 +18,7 @@
 p {
   line-height: 2;
 }
+
+.codeblock {
+  overflow-x: auto;
+}
