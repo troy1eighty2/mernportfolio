@@ -42,7 +42,7 @@ function Content() {
             case "img":
               return <img src={item.title} className={styles.img} />;
             case "a":
-              return <span><a className={styles.a} href={item.link} target="_blank">{item.title}</a></span>;
+              return <span className={styles.a}><a href={item.link} target="_blank">{item.title}</a></span>;
             case "iframe":
               return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             case "short":
