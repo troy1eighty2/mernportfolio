@@ -5,13 +5,12 @@
   font-style: normal;
 }
 
-*:not(.codeblock) {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #FFFEF6;
   /* border-style: solid; */
   /* border-radius: 1px; */
 }
