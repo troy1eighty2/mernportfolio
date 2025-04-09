@@ -63,7 +63,7 @@ function Content() {
                     },
                   ],
                 }
-                return <Radar data={data} options={options}></Radar>
+                return <div className={styles.radar}><Radar data={data} options={options}></Radar></div>
               }
             default:
               return <Tag key={index}>{item.title}</Tag>

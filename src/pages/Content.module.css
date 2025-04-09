@@ -4,6 +4,7 @@
 
 .a {
   margin: 0;
+  margin-top: -5%;
 }
 
 link {
@@ -26,4 +27,8 @@ p {
 
 .codeblock {
   overflow-x: auto;
+}
+
+.radar {
+  width: 80%;
 }
