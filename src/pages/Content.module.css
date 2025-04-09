@@ -4,12 +4,10 @@
 
 .a {
   margin: 0;
-  margin-top: -5%;
 }
 
 .link {
   display: inline;
-  margin-top: -5%;
 }
 
 
@@ -30,5 +28,9 @@ p {
 }
 
 .radar {
-  width: 80%;
+  /* width: 80%; */
+}
+
+.pa {
+  margin: 0;
 }

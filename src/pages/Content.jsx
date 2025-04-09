@@ -41,6 +41,8 @@ function Content() {
           switch (Tag) {
             case "img":
               return <img src={item.title} className={styles.img} />;
+            case "pa":
+              return <p className={styles.pa}>{item.title}</p>
             case "a":
               return <span className={styles.a}><a className={styles.link} href={item.link} target="_blank">{item.title}</a></span>;
             case "iframe":
