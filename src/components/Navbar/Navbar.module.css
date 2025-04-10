@@ -1,8 +1,14 @@
+.gifName {
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
+  height: min-content;
   justify-content: space-between;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .links {
@@ -11,8 +17,7 @@
 }
 
 .links li {
-  margin-right: 3%;
-  margin-left: 3%;
+  margin: 0 5px 0 5px;
   display: flex;
   align-items: center;
 
@@ -22,14 +27,49 @@
   margin-bottom: 10%;
 }
 
+.welcome {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header {
+  display: flex;
+}
+
+.exposition {
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 50px;
+}
+
+.newMobile {
+  display: none;
+  width: 50px;
+}
+
+
 @media (max-width:850px) {
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+
   }
+
+  .new {
+    display: none;
+  }
+
+  .newMobile {
+    display: flex;
+
+  }
+
 
   .links li {
     margin: 0;

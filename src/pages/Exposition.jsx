@@ -1,29 +1,10 @@
 import styles from "./Exposition.module.css";
 import { useState, useEffect } from "react";
 import boilerplate from "./Boilerplate.module.css";
-import axios from "axios";
 import BlogItem from "../components/BlogItem/BlogItem.jsx";
 
-function Exposition({ blogID, setBlogID }) {
-  const [blog, setBlog] = useState([]);
-  const [recent, setRecent] = useState(null);
+function Exposition({ blog, recent }) {
 
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/exposition`)
-      .then((response) => {
-        const blog_sorted = response.data
-          .sort((a, b) => new Date(b.date) - new Date(a.date));
-        setBlog(blog_sorted);
-
-        if (blog_sorted.length > 0) {
-          setRecent(blog_sorted[0].date);
-        }
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }, []);
   return <>
     <div className={boilerplate.page}>
       <div>
