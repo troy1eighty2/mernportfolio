@@ -3,27 +3,28 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import expositionRoutes from "./routes/expositionRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
 
 dotenv.config();
 
 const app = express();
 
 const corsOptions = {
-  origin: "https://troytran.com",
+  // origin: "https://troytran.com",
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
+  credentials: false,
 };
 
 // Apply CORS middleware globally
-app.use(cors(corsOptions));
+app.use(cors());
 
-// Manually handle OPTIONS requests for all routes
-app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
 app.use('/exposition', expositionRoutes);
+app.use('/comment', commentRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

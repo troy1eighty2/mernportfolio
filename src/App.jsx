@@ -6,6 +6,7 @@ import Exposition from "./pages/Exposition.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Content from "./pages/Content.jsx";
+import Comments from "./pages/Comments.jsx";
 import axios from "axios";
 
 import styles from "./App.module.css";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/exposition" element={<Exposition blog={blog} recent={recent}></Exposition>}></Route>
           <Route path="/exposition/:id/:title" element={<Content></Content>}></Route>
         </Routes>
+        <Comments></Comments>
         <Footer></Footer>
       </div >
     </>

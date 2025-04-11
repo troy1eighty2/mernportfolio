@@ -21,7 +21,8 @@
     "react-router-dom": "^6.26.2",
     "react-helmet": "*",
     "react-code-blocks": "*",
-    "react-chartjs-2": "*"
+    "react-chartjs-2": "*",
+    "react-color": "*"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

@@ -15,20 +15,20 @@ function Navbar({ recent }) {
   }
   return <>
     <nav className={styles.navbar}>
-      <Link to="/"><div className={styles.gifName}><img src="/welcome.gif" className={styles.welcome}></img><h2>troy tran</h2>{determineRecent() ? <img className={styles.newMobile} src="/new.gif" /> : null}</div></Link>
+      <Link to="/"><div className={styles.gifName}><img src="/welcome.gif" className={styles.welcome}></img><h1>troy tran</h1>{determineRecent() ? <img className={styles.newMobile} src="/new.gif" /> : null}</div></Link>
       <ul className={styles.links}>
         <li>
-          <Link to="/about"><h2>about</h2></Link>
+          <Link to="/about"><h1>about</h1></Link>
         </li>
         <li>-</li>
         <li>
-          <Link to="/projects"><h2>projects</h2></Link>
+          <Link to="/projects"><h1>projects</h1></Link>
         </li>
         <li>-</li>
         <li className={styles.exposition}>
 
           {determineRecent() ? <img src="/new.gif" className={styles.new} /> : null}
-          <Link to="/exposition"><h2>exposition</h2></Link>
+          <Link to="/exposition"><h1>exposition</h1></Link>
         </li>
       </ul>
     </nav>
