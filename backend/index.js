@@ -19,6 +19,7 @@ const corsOptions = {
 
 // Apply CORS middleware globally
 app.use(cors());
+app.set('trust proxy', true);
 
 
 app.use(express.json());

@@ -14,7 +14,7 @@ function Comment({ name, text, time }) {
   return <>
     <div className={styles.container}>
       <div className={styles.header}>
-        <b>{name === "" ? "A Ninny Mouse" : name}</b>
+        <b>{name.trim() === "" ? "A Ninny Mouse" : name}</b>
         <small>{`${date[0].value} ${date[2].value}, ${date[4].value} @ ${date[6].value}:${date[8].value} ${date[10].value}`}</small>
       </div>
       <div className={styles.text}>

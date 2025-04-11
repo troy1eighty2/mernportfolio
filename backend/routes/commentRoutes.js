@@ -15,9 +15,7 @@ router.get("/", async (request, response) => {
 })
 router.post("/add", async (request, response) => {
   try {
-    const ip =
-      request.headers['x-forwarded-for']?.split(',').shift() || // for proxies
-      request.socket?.remoteAddress;
+    const ip = request.ip
     console.log(request.body)
     const item = request.body
     const newComment = {
