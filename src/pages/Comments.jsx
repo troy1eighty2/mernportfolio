@@ -9,6 +9,11 @@ function Comments() {
   const [nameCount, setNameCount] = useState(0)
   const [textCount, setTextCount] = useState(0)
   const [comments, setComments] = useState([])
+  const [page, setPage] = useState(0)
+  const commentsPerPage = 5
+  const paginatedComments = comments.slice(
+    page * commentsPerPage, (page + 1) * commentsPerPage
+  )
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
@@ -70,7 +75,11 @@ function Comments() {
     <hr className={styles.line} />
     <div className={styles.container}>
       <div className={styles.comment}>
-        {comments.map((item, index) => {
+        <div className={styles.forwardBackward}>
+          <button onClick={() => setPage(page - 1)} disabled={page == 0} className={styles.forwardBackwardButton}>{`<`}</button>
+          <button onClick={() => setPage(page + 1)} disabled={(page + 1) * commentsPerPage >= comments.length} className={styles.forwardBackwardButton}>{`>`}</button>
+        </div>
+        {paginatedComments.map((item, index) => {
           return <Comment key={index} name={item.name} text={item.text} time={item.createdAt}></Comment>
         })}
       </div>

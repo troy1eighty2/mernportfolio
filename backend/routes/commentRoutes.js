@@ -15,11 +15,15 @@ router.get("/", async (request, response) => {
 })
 router.post("/add", async (request, response) => {
   try {
+    const ip =
+      request.headers['x-forwarded-for']?.split(',').shift() || // for proxies
+      request.socket?.remoteAddress;
     console.log(request.body)
     const item = request.body
     const newComment = {
       name: item.name,
-      text: item.text
+      text: item.text,
+      ip: ip
     }
 
     const commentInstance = new CommentEntry(newComment)
@@ -32,17 +36,5 @@ router.post("/add", async (request, response) => {
     return response.status(400).json({ error: "failed post" })
   }
 })
-
-// router.get("/:id", async (request, response) => {
-//   try {
-//     const { id } = request.params;
-//     const blog = await BlogEntry.findById(id)
-//     return response.status(200).json(blog)
-//   }
-//   catch (error) {
-//     console.log(error)
-//     return response.status(500).json({ error: "server error" });
-//   }
-// })
 
 export default router;

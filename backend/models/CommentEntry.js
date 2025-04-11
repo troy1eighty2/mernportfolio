@@ -9,6 +9,10 @@ const commentSchema = mongoose.Schema(
       type: String,
       required: true
     },
+    ip: {
+      type: String,
+      required: false
+    },
 
   },
   {

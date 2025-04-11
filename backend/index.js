@@ -10,11 +10,11 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  // origin: "https://troytran.com",
-  origin: "*",
+  origin: "https://troytran.com",
+  // origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: false,
+  credentials: true,
 };
 
 // Apply CORS middleware globally
