@@ -15,13 +15,15 @@ router.get("/", async (request, response) => {
 })
 router.post("/add", async (request, response) => {
   try {
-    const ip = request.ip
+    const ip = request.headers['x-real-ip']
+    const user_agent = request.headers['user-agent']
     console.log(request.body)
     const item = request.body
     const newComment = {
       name: item.name,
       text: item.text,
-      ip: ip
+      ip: ip,
+      user_agent: user_agent
     }
 
     const commentInstance = new CommentEntry(newComment)

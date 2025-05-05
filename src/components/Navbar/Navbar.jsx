@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 function Navbar({ recent }) {
-  const fourteenDaysInMiliseconds = 14 * 24 * 60 * 60 * 1000
+  const tenDaysInMiliseconds = 7 * 24 * 60 * 60 * 1000
 
   function determineRecent() {
-    if ((new Date() - new Date(recent)) < fourteenDaysInMiliseconds) {
+    if ((new Date() - new Date(recent)) < tenDaysInMiliseconds) {
       console.log("true")
       return true
     }
