@@ -15,14 +15,15 @@
     "start:server": "node backend/index.js"
   },
   "dependencies": {
+    "axios": "^1.10.0",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "react-helmet": "*",
-    "react-code-blocks": "*",
     "react-chartjs-2": "*",
-    "react-color": "*"
+    "react-code-blocks": "*",
+    "react-color": "*",
+    "react-dom": "^18.3.1",
+    "react-helmet": "*",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
