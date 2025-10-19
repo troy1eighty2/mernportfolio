@@ -29,18 +29,18 @@ function Comments() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(form)
+    // console.log(form)
     axios
       .post(`${import.meta.env.VITE_API_URL}/comment/add`, form)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         setForm({ name: '', text: '' });
         setNameCount(0);
         setTextCount(0);
         return axios
           .get(`${import.meta.env.VITE_API_URL}/comment`)
           .then((response) => {
-            console.log(response.data)
+            // console.log(response.data)
             const comments_sorted = response.data
               .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             setComments(comments_sorted);
@@ -59,7 +59,7 @@ function Comments() {
     axios
       .get(`${import.meta.env.VITE_API_URL}/comment`)
       .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
         const comments_sorted = response.data
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setComments(comments_sorted);

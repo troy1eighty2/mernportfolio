@@ -10,7 +10,7 @@ function Comment({ name, text, time }) {
     hour12: true
   })
   const date = formatter.formatToParts(dateTime)
-  console.log(date)
+  // console.log(date)
   return <>
     <div className={styles.container}>
       <div className={styles.header}>

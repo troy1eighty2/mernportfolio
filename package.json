@@ -15,6 +15,7 @@
     "start:server": "node backend/index.js"
   },
   "dependencies": {
+    "@sanity/cli": "^4.0.1",
     "axios": "^1.10.0",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
@@ -23,13 +24,14 @@
     "react-color": "*",
     "react-dom": "^18.3.1",
     "react-helmet": "*",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "sanity": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

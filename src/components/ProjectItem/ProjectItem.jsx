@@ -2,17 +2,17 @@ import styles from "./ProjectItem.module.css";
 function ProjectItem({ name, blurb, url, date }) {
   const reDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
     timeZone: "UTC"
   });
   return <li className={styles.item}>
-    <div>
+    <div className={styles.row1}>
       <a href={url} target="_blank">{name}</a>
-      <p>{blurb}</p>
+      <p className={styles.date}>{reDate}</p>
     </div>
-    <div className={styles.date}>
-      {reDate}
+    <div className={styles.row2}>
+      <p>{blurb}</p>
     </div>
   </li>
 }

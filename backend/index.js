@@ -9,14 +9,6 @@ dotenv.config();
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://troytran.com",
-  // origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-};
-
 // Apply CORS middleware globally
 app.use(cors());
 app.set('trust proxy', true);
@@ -31,7 +23,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(process.env.PORT, () => {
-      console.log(`Connected to database and listening on port 3000`)
+      console.log(`Connected to database and listening on port ${process.env.PORT}`)
     })
 
   })

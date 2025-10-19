@@ -6,6 +6,7 @@ import Exposition from "./pages/Exposition.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Content from "./pages/Content.jsx";
+import SanityContent from "./pages/SanityContent.jsx";
 import Comments from "./pages/Comments.jsx";
 import axios from "axios";
 

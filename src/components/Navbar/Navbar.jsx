@@ -6,10 +6,11 @@ function Navbar({ recent }) {
 
   function determineRecent() {
     if ((new Date() - new Date(recent)) < tenDaysInMiliseconds) {
-      console.log("true")
+      // console.log("true")
       return true
     }
-    console.log("false")
+    // console.log("false")
+    // return false
     return false
 
   }

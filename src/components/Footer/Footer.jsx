@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 function Footer() {
   return <>
     <div >
-      <hr className={styles.line} />
+      {/* <hr className={styles.line} /> */}
       <ul className={styles.footer}>
         <li><a href="https://github.com/troy1eighty2" target="_blank">github</a></li>
         <li>-</li>

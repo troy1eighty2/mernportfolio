@@ -40,17 +40,17 @@ function Content() {
           const Tag = item.type;
           switch (Tag) {
             case "img":
-              return <img src={item.title} className={styles.img} />;
+              return <img key={index} src={item.title} className={styles.img} />;
             case "pa":
-              return <p className={styles.pa}>{item.title}</p>
+              return <p key={index} className={styles.pa}>{item.title}</p>
             case "a":
-              return <span className={styles.a}><a className={styles.link} href={item.link} target="_blank">{item.title}</a></span>;
+              return <span key={index} className={styles.a}><a className={styles.link} href={item.link} target="_blank">{item.title}</a></span>;
             case "iframe":
-              return <iframe width="300" height="200" src={item.title} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+              return <iframe key={index} width="300" height="200" src={item.title} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
             case "short":
-              return <iframe width="300" height="500" src={item.title} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+              return <iframe key={index} width="300" height="500" src={item.title} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
             case "codeblock":
-              return <div className={styles.codeblock}><CopyBlock text={`${item.title}`} language={`${item.language}`} showLineNumbers={true} startingLineNumber={1} theme={monokai}></CopyBlock></div>
+              return <div key={index} className={styles.codeblock}><CopyBlock text={`${item.title}`} language={`${item.language}`} showLineNumbers={true} startingLineNumber={1} theme={monokai}></CopyBlock></div>
             case "oirss":
               {
                 const data = {
@@ -65,7 +65,7 @@ function Content() {
                     },
                   ],
                 }
-                return <div className={styles.radar}><Radar data={data} options={options}></Radar></div>
+                return <div key={index} className={styles.radar}><Radar data={data} options={options}></Radar></div>
               }
             default:
               return <Tag key={index}>{item.title}</Tag>
