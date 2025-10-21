@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import Content from "./pages/Content.jsx";
 import SanityContent from "./pages/SanityContent.jsx";
 import Comments from "./pages/Comments.jsx";
+import {client} from "./sanity/client.js"
 import axios from "axios";
 
 import styles from "./App.module.css";
@@ -22,16 +23,23 @@ function App() {
       .get(`${import.meta.env.VITE_API_URL}/exposition`)
       .then((response) => {
         const blog_sorted = response.data
-          .sort((a, b) => new Date(b.date) - new Date(a.date));
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
         setBlog(blog_sorted);
 
-        if (blog_sorted.length > 0) {
-          setRecent(blog_sorted[0].date);
-        }
       })
       .catch((error) => {
         console.log(error)
       })
+    client
+      .fetch(`*[_type == 'post']|order(publishedAt desc){publishedAt}`)
+      .then((data)=>{
+        // console.log(data[0])
+        setRecent(new Date (data[0].publishedAt).toLocaleDateString("en-US", {year: "numeric",month: "short",day: "numeric",timeZone: "America/Chicago"}))
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
   }, []);
   return (
     <>
@@ -42,8 +50,8 @@ function App() {
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/projects" element={<Projects></Projects>}></Route>
           <Route path="/exposition" element={<Exposition blog={blog} recent={recent}></Exposition>}></Route>
-          <Route path="/exposition/:title" element={<Content></Content>}></Route>
-          {/* <Route path="/exposition/:slug" element={<SanityContent><SanityContent/>}></Route> */}
+          <Route path="/exposition/static/:title" element={<Content></Content>}></Route>
+          <Route path="/exposition/:slug" element={<SanityContent></SanityContent>}></Route>
         </Routes>
         <Comments></Comments>
         <Footer></Footer>

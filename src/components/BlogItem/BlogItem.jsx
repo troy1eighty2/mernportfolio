@@ -11,7 +11,7 @@ function BlogItem({ id, title, blurb, date, isSanityContent}) {
   return (isSanityContent ? <li className={styles.item}>
 
     <div className={styles.row1}>
-      <Link to={`/exposition/${id}`}>{title}</Link>
+      <Link to={`/exposition/${id.current}`}>{title}</Link>
       <p className={styles.date}>{reDate}</p>
     </div>
     <div className={styles.row2}>
@@ -25,7 +25,7 @@ function BlogItem({ id, title, blurb, date, isSanityContent}) {
   </li>:
     <li className={styles.legacyitem}>
       <div className={styles.row1}>
-        <Link className={styles.legacy}to={`/exposition/${title}`}>{title}</Link>
+        <Link className={styles.legacy} to={`/exposition/static/${title}`}>{title}</Link>
         <p className={styles.date}>{reDate}</p>
       </div>
       <div className={styles.row2}>

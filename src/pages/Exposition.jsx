@@ -15,8 +15,8 @@ function Exposition({ blog, recent }) {
   const [search, setSearch] = useState("");
   
   const filter = (funcFilters, funcSearch) => {
-    console.log(funcSearch)
-    console.log(funcFilters)
+    // console.log(funcSearch)
+    // console.log(funcFilters)
 
     setFilteredBlogs(()=>{
       let filtered;
@@ -61,14 +61,14 @@ function Exposition({ blog, recent }) {
     });
     
   }
-  // console.log(blog)
 
+  // console.log(filteredBlogs)
   useEffect(()=>{
     client
       .fetch(`*[_type == 'post' && !('pinned' in categories[]->title)]|order(date desc){title, blurb, publishedAt, slug, "categories":categories[]->title}[0...100]`)
       .then((data)=>{
         setBlogs(data)
-        setFilteredBlogs(data)
+        setFilteredBlogs(data.sort((a, b)=> new Date(b.publishedAt) - new Date(a.publishedAt)))
       })
 
       .catch((error) => {
@@ -77,14 +77,14 @@ function Exposition({ blog, recent }) {
     client
       .fetch(`*[_type == 'post' && ('pinned' in categories[]->title)]|order(date desc){title, blurb, publishedAt, slug, "categories":categories[]->title}[0...100]`)
       .then((data)=>{
-        setPinned_Blogs(data)
-      })
-
+        setPinned_Blogs(data.sort((a, b)=> new Date(b.publishedAt) - new Date(a.publishedAt)))})
       .catch((error) => {
         console.log(error)
       })
 
+
   },[])
+  // console.log(filteredBlogs)
   return <>
     <div className={boilerplate.page}>
       <div>
@@ -116,8 +116,7 @@ function Exposition({ blog, recent }) {
         )}
         {filteredBlogs && filteredBlogs.length === 0 && 
           <div className={styles.empty}>
-            (╥﹏╥)
-            nothing to see...
+            (╥﹏╥)  nothing to see...
           </div>
         }
       </div>

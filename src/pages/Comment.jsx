@@ -2,7 +2,7 @@ import styles from "./Comment.module.css";
 function Comment({ name, text, time }) {
   const dateTime = new Date(time)
   const formatter = new Intl.DateTimeFormat('en-US', {
-    month: 'long',
+    month: 'short',
     day: 'numeric',
     year: '2-digit',
     hour: 'numeric',

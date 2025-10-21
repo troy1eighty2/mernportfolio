@@ -13,6 +13,7 @@ function Content() {
   const { title} = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     axios
       .get(`${import.meta.env.VITE_API_URL}/exposition/${title}`)
       .then((response) => {

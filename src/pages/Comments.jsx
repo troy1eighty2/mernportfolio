@@ -76,8 +76,8 @@ function Comments() {
     <div className={styles.container}>
       <div className={styles.comment}>
         <div className={styles.forwardBackward}>
-          <button onClick={() => setPage(page - 1)} disabled={page == 0} className={styles.forwardBackwardButton}>{`<`}</button>
-          <button onClick={() => setPage(page + 1)} disabled={(page + 1) * commentsPerPage >= comments.length} className={styles.forwardBackwardButton}>{`>`}</button>
+          <button onClick={() => setPage(page - 1)} disabled={page == 0} className={`${styles.forwardBackwardButton} ${page === 0 ? styles.disabled: null }`}>{`<`}</button>
+          <button onClick={() => setPage(page + 1)} disabled={(page + 1) * commentsPerPage >= comments.length} className={`${styles.forwardBackwardButton} ${(page + 1)*commentsPerPage >=comments.length ? styles.disabled: null }`}>{`>`}</button>
         </div>
         {paginatedComments.map((item, index) => {
           return <Comment key={index} name={item.name} text={item.text} time={item.createdAt}></Comment>
