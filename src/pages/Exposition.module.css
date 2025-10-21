@@ -1,0 +1,17 @@
+.item{
+  height:min-content;
+  display:flex;
+  width:100%;
+  height:100%;
+  align-items:center;
+  gap: 10px;
+}
+.list, pinnedList{
+  display:flex;
+  flex-direction:column;
+  gap:100px;
+}
+.empty{
+  width:100%;
+  color:gray;
+}

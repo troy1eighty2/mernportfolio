@@ -2,6 +2,8 @@
   /* border:black solid 1px; */
   display: flex;
   flex-direction: column;
+  height:min-content;
+  width:100%;
 }
 .legacyitem a.legacy, .legacyitem{
   color:gray;

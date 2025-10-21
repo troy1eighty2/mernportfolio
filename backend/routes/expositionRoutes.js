@@ -14,10 +14,10 @@ router.get("/", async (request, response) => {
   }
 })
 
-router.get("/:id", async (request, response) => {
+router.get("/:title", async (request, response) => {
   try {
-    const { id } = request.params;
-    const blog = await BlogEntry.findById(id)
+    const { title } = request.params;
+    const blog = await BlogEntry.findOne({title: title})
     return response.status(200).json(blog)
   }
   catch (error) {

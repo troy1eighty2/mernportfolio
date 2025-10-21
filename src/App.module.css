@@ -19,9 +19,25 @@
 h1 {
   font-size: 1.5em;
 }
-
-
-
+button{
+  cursor:pointer;
+  all:unset;
+  border-radius: 5px;
+  border: black solid 1px;
+  font-size: 80%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  color: black;
+  background-color: lightgray;
+}
+button:hover{
+  cursor:pointer;
+  background-color: gray;
+}
+button:active{
+  background-color:darkgray;
+}
 
 .container {
   width: 800px;

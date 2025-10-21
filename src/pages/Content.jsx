@@ -10,18 +10,18 @@ import { options } from "../chartConfig.js";
 
 function Content() {
   const [blog, setBlog] = useState({ title: "", blurb: "", content: [], date: "" });
-  const { id } = useParams();
+  const { title} = useParams();
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/exposition/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/exposition/${title}`)
       .then((response) => {
         setBlog(response.data)
       })
       .catch((error) => {
         console.log(error)
       })
-  }, [id])
+  }, [title])
   return <>
     <div className={boilerplate.page}>
       <Helmet>
