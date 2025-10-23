@@ -9,42 +9,47 @@ function About() {
         <p className={boilerplate.info}>My config stuff</p>
       </div>
       <p>
-        I was born and raised in Texas. I go to school here too, where I picked up programming for fun.
-        I am obsessed with workflow configuration and VIM. I love collecting laptops to refurbish with new parts and software to be brandished as daily drivers. I like guitar and bodybuilding with my role models being Yvette Young and Wesley Vissers.
+        Devops and site reliability engineering. Neovim, arch linux, and workflow enthusiast. Music and bodybuilding.
       </p>
+
+      <img src="/arch.gif" className={styles.gif}></img>
       <div>
         <h2>Hardware I'm Rocking:</h2>
         <ul>
-          <li>Laptop: DellG15 5511</li>
-          <li>GPU: NVIDIA RTX 3060 Mobile</li>
-          <li>CPU: 11th Gen Intel i7-11800H</li>
-          <li>Headset: HyperX Cloud Stinger 2 Wireless</li>
-          <li>Keyboard: Logitech G915 TKL Wireless</li>
-          <li>Mouse: Logitech M510 Wireless</li>
+          <li>Main: Lenovo Thinkpad T480</li>
+          <li>Typewriter: Lenovo Thinkpad x220</li>
+          <li>Phone: Kyocera 902kc</li>
+          <li>Mouse: Logitech M510</li>
         </ul>
       </div>
       <div>
         <h2>System Information:</h2>
         <ul>
-          <li>OS: Ubuntu</li>
+          <li>OS: arch</li>
           <li>Terminal: kitty</li>
-          <li>Shell: bash</li>
           <li>Text Editor: nvim</li>
+          <li>DE/WM: hyprland</li>
           <li>Favorite Nvim Plugins: flash, harpoon, surround</li>
-          <li>Windows Manager: i3</li>
-          <li>Theme: gruvbox</li>
         </ul>
+        <div className={styles.grid}>
+          <img src="/setup.jpeg" className={styles.image}></img>
+          <img src="/worm.JPG" className={styles.image}></img>
+          <img src="/drives.jpeg" className={styles.image}></img>
+          <img src="/mo.JPG" className={styles.image}></img>
+          <img src="/x220gore.jpeg" className={styles.image}></img>
+          <img src="/cat.JPG" className={styles.image}></img>
+        </div>
       </div>
-      <div>
-        <h2>Guitar:</h2>
-        <ul>
-          <li>Ibanez Gio</li>
-          <li>Mini Boss Katana</li>
-          <li>Jazz 3 Picks</li>
-          <li>Rhythm and Hybrid Picking</li>
-        </ul>
+      {/* <div> */}
+        {/* <h2>Guitar:</h2> */}
+        {/* <ul> */}
+        {/*   <li>Ibanez Gio</li> */}
+        {/*   <li>Mini Boss Katana</li> */}
+        {/*   <li>Jazz 3 Picks</li> */}
+        {/*   <li>Rhythm and Hybrid Picking</li> */}
+        {/* </ul> */}
         {/* hi */}
-      </div>
+      {/* </div> */}
       <p>My <a href="https://github.com/troy1eighty2/config" target="_blank"> nvim config files</a> and <a href="https://github.com/troy1eighty2/vimconfig" target="_blank"> vim config files</a> are on my GitHub</p>
     </div>
   </>

@@ -1,4 +1,11 @@
 .container{
   height: 100%;
   width: 100%;
+  display:flex;
+  border: black solid 1px;
+}
+.topSongs{
+  display:flex;
+  height:100%;
+  width:100%;
 }

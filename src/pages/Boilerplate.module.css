@@ -6,12 +6,12 @@
   color: gray;
 }
 
-.page>* {
-  margin-bottom: 10%;
-}
-
 
 li {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+.page>* {
+  margin-bottom: 10%;
 }
